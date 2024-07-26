@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +15,70 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* carousel */
+.carousel .legend {
+  font-size: 20px; 
+  padding: 2px 2px; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: rgb(0, 0, 0); 
+}
+
+@media (min-width: 640px) {
+  .carousel .legend {
+    font-size: 16px; 
+    padding: 2px 2px; 
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel .legend {
+    font-size: 20px; 
+    padding: 8px 16px; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel .legend {
+    font-size: 24px;
+    padding: 10px 20px; 
+  }
+}
+.carousel-container .carousel-item {
+  position: relative;
+}
+
+.carousel-container .carousel-image {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-container .legend {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .carousel-container .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-container .carousel-image {
+    height: 400px; /* Adjust height as needed */
+  }
+
+  .carousel-container .legend {
+    font-size: 0.75rem; /* Adjust font size as needed */
+    bottom: 5px;
+    left: 5px;
+  }
+}
+
